@@ -36,6 +36,7 @@ local options = {
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
+
 }
 
 for k, v in pairs(options) do
@@ -50,3 +51,8 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins f
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+
+-- for plugin indent blackline
+vim.opt.list = true
+vim.opt.listchars:append "eol:↴"
