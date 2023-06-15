@@ -44,7 +44,6 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
---  use 'kyazdani42/nvim-tree.lua'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
 
@@ -79,6 +78,16 @@ return packer.startup(function(use)
   -- buffer line
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+
+  --lua-line
+  use 'nvim-lualine/lualine.nvim'
+
+  --toggle-terminal
+   use "akinsho/toggleterm.nvim"
+
+
+   --start-page
+   use "goolord/alpha-nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
