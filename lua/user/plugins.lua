@@ -40,58 +40,69 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
+	-- My plugins here
+	use("wbthomason/packer.nvim") -- Have packer manage itself
+	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
 
+	-- Colorschemes
+	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
+	--use "lunarvim/darkplus.nvim"
 
-  -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  --use "lunarvim/darkplus.nvim"
+	-- cmp plugins
+	use("hrsh7th/nvim-cmp") -- The completion plugin
+	use("hrsh7th/cmp-buffer") -- buffer completions
+	use("hrsh7th/cmp-path") -- path completions
+	use("hrsh7th/cmp-cmdline") -- cmdline completions
+	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+	use("hrsh7th/cmp-nvim-lsp")
 
-  -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
+	-- snippets
+	use("L3MON4D3/LuaSnip") --snippet engine
+	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
-  -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+	-- LSP
+	use("neovim/nvim-lspconfig") -- enable LSP
+	use("williamboman/mason.nvim") -- simple to use language server installer
+	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("RRethy/vim-illuminate")
 
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/mason.nvim" -- simple to use language server installer
-  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim"
-  use "RRethy/vim-illuminate"
+	-- Telescope
+	use("nvim-telescope/telescope.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
 
-  -- Telescope
-  use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
+	-- buffer line
+	use("akinsho/bufferline.nvim")
+	use("moll/vim-bbye")
 
-  -- buffer line
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
+	--lua-line
+	use("nvim-lualine/lualine.nvim")
 
-  --lua-line
-  use 'nvim-lualine/lualine.nvim'
+	--toggle-terminal
+	use("akinsho/toggleterm.nvim")
 
-  --toggle-terminal
-   use "akinsho/toggleterm.nvim"
+	--start-page
+	use("goolord/alpha-nvim")
 
+	--autopairs
+	use("windwp/nvim-autopairs")
 
-   --start-page
-   use "goolord/alpha-nvim"
+	-- use("numToStr/Comment.nvim") -- Easily comment stuff
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
+  use "lukas-reineke/indent-blankline.nvim"
+
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if PACKER_BOOTSTRAP then
+		require("packer").sync()
+	end
 end)
