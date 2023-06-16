@@ -1,7 +1,8 @@
 local dap = require("dap")
 dap.adapters.python = {
 	type = "executable",
-	command = "/home/wukong/anaconda3/envs/nvim-dap-learn/bin/python",
+	-- command = "/home/wukong/anaconda3/envs/nvim-dap-learn/bin/python",
+	command = "python",
 	args = { "-m", "debugpy.adapter" },
 }
 
@@ -12,7 +13,7 @@ dap.configurations.python = {
 		name = "launch file",
 		program = "${file}",
 		pythonPath = function()
-			return "/home/wukong/anaconda3/envs/nvim-dap-learn/bin/python"
+			return "python"
 		end,
 	},
 }
