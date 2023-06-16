@@ -3,6 +3,6 @@ if not status_ok then
 	return
 end
 
-require('user.dap.debugpy')
-require('user.dap.golang')
-require('user.dap.codelldb')
+require("user.dap.debugpy")
+require("user.dap.golang")
+require("user.dap.codelldb")
