@@ -4,3 +4,5 @@ if not status_ok then
 end
 
 require('user.dap.debugpy')
+require('user.dap.golang')
+require('user.dap.codelldb')
