@@ -128,6 +128,7 @@ return packer.startup(function(use)
 			require("glow").setup()
 		end,
 	})
+	use("sindrets/diffview.nvim")
 
 	-- debug DAP
 
