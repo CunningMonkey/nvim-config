@@ -121,6 +121,14 @@ return packer.startup(function(use)
 	--fold/unfold
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 
+	--markdown preview
+	use({
+		"ellisonleao/glow.nvim",
+		config = function()
+			require("glow").setup()
+		end,
+	})
+
 	-- debug DAP
 
 	-- use 'mfussenegger/nvim-dap'
