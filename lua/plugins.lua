@@ -103,18 +103,18 @@ return packer.startup(function(use)
 
 	use("lukas-reineke/indent-blankline.nvim")
 
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 1000
-			require("which-key").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
+	-- use({
+	-- 	"folke/which-key.nvim",
+	-- 	config = function()
+	-- 		vim.o.timeout = true
+	-- 		vim.o.timeoutlen = 1000
+	-- 		require("which-key").setup({
+	-- 			-- your configuration comes here
+	-- 			-- or leave it empty to use the default settings
+	-- 			-- refer to the configuration section below
+	-- 		})
+	-- 	end,
+	-- })
 
 	use("ahmedkhalf/project.nvim")
 
@@ -130,6 +130,16 @@ return packer.startup(function(use)
 	})
 	use("sindrets/diffview.nvim")
 
+	-- use({
+	-- 	"kylechui/nvim-surround",
+	-- 	tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+	-- 	config = function()
+	-- 		require("nvim-surround").setup({
+	-- 			-- Configuration here, or leave empty to use defaults
+	-- 		})
+	-- 	end,
+	-- })
+	--
 	-- debug DAP
 
 	-- use 'mfussenegger/nvim-dap'

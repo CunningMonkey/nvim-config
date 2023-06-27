@@ -30,3 +30,6 @@ lualine.setup({
 		lualine_x = { "encoding", "filetype" },
 	},
 })
+
+
+
