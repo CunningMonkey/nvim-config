@@ -29,7 +29,5 @@ lualine.setup({
 		lualine_c = { branch, "diagnostics", "diff" },
 		lualine_x = { "encoding", "filetype" },
 	},
+	theme = "tokyonight",
 })
-
-
-

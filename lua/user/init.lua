@@ -18,3 +18,5 @@ require("user.alpha")
 --require("user.dap")
 
 require("user.ufo")
+require("user.leap")
+require("user.tokyonight")
