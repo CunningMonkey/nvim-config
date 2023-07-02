@@ -1,8 +1,3 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-	return
-end
-
 vim.o.shortmess = vim.o.shortmess .. "S"
 
 local function search_count()
@@ -23,11 +18,12 @@ local branch = {
 	icon = "",
 }
 
-lualine.setup({
+return {
+
 	sections = {
 		lualine_b = { { search_count, type = "lua_expr" } },
 		lualine_c = { branch, "diagnostics", "diff" },
 		lualine_x = { "encoding", "filetype" },
 	},
 	theme = "tokyonight",
-})
+}

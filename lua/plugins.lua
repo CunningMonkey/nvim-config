@@ -1,4 +1,3 @@
-
 require("lazy").setup({
 
 	"nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
@@ -33,7 +32,11 @@ require("lazy").setup({
 	"akinsho/bufferline.nvim",
 	"moll/vim-bbye",
 
-	"nvim-lualine/lualine.nvim",
+	{
+		"nvim-lualine/lualine.nvim",
+		opts = require("user.lualine"),
+		lazy = false,
+	},
 
 	"akinsho/toggleterm.nvim",
 
@@ -51,13 +54,12 @@ require("lazy").setup({
 	"kylechui/nvim-surround",
 
 	"ggandor/leap.nvim",
-}
-)
+})
 
- --debug DAP
+--debug DAP
 
 -- use 'mfussenegger/nvim-dap'
 -- use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
- --use 'theHamsta/nvim-dap-virtual-text'
- --Automatically set up your configuration after cloning packer.nvim
- --Put this at the end after all plugins
+--use 'theHamsta/nvim-dap-virtual-text'
+--Automatically set up your configuration after cloning packer.nvim
+--Put this at the end after all plugins
