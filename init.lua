@@ -17,6 +17,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --require "plugins"
-require "lazy_config"
+require "plugins"
 require "user"
 require "colorscheme"

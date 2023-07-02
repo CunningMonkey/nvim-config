@@ -6,9 +6,6 @@ require("lazy").setup({
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
 
-	-- Colorschemes
-	-- "lunarvim/colorschemes",
-	-- "lunarvim/darkplus.nvim",
 	"folke/tokyonight.nvim",
 
 	-- cmp plugins
